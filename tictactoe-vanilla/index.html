@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Tic Tac Toe</title>
+	<script src="game.js"></script> 
+<style>
+	#mainScreen{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction:  column;
+		
+	}
+	#board{
+		margin-top: 50px;
+		width: 480px;
+		height: 480px;
+		border-style : solid;
+		border-width: 2px;
+		display: flex;
+		flex-direction: row;
+		flex-flow: nowrap;
+	}
+	.tile{
+		height: 158px;
+		width: 158px;
+		border-style : solid;
+		border-width: 0.1px;
+		cursor: pointer;
+	}
+	
+	.button-container{
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		width: 480px;
+		height: 50px;
+		/* border-width: 1px;
+		border-style: solid; */
+		align-items: center;
+		justify-content: space-around;
+	}
+	.choices{
+		width: 100px;
+		font-size: 24px;
+		border-radius: 10px;
+	}
+	.prompt{
+		margin-top: 30px;
+	}
+
+</style>
+</head>
+<body>
+	<div id="mainScreen">
+		<p>
+			Let's play a game 
+		</p>
+		<div id = "board">
+			<div class="row">
+				<div id = "tile-1" class = "tile" >
+					
+				</div>
+				<div id = "tile-2" class = "tile">
+					
+				</div>
+				<div id = "tile-3" class = "tile">
+					
+				</div>
+			</div>
+			<div class="row">
+				<div id = "tile-4" class = "tile">
+					
+				</div>
+				<div id = "tile-5" class = "tile">
+					
+				</div>
+				<div id = "tile-6" class = "tile">
+					
+				</div>
+			</div>
+			<div class="row">
+				<div id = "tile-7"  class = "tile">
+					
+				</div>
+				<div id = "tile-8" class = "tile">
+					
+				</div>
+				<div id = "tile-9" class = "tile">
+					
+				</div>
+			</div>
+		</div>
+	<div class = "prompt">
+		<p>
+			Choose your player:
+		</p>
+	</div>
+	<div class = "button-container">
+		<div>
+			<button class = "choices">X</button>
+		</div>
+		<div>
+			<button class = "choices">O</button>
+		</div>
+	</div>
+
+
+	</div>
+</body>
+</html>
