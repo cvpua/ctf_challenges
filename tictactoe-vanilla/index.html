@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Tic Tac Toe</title>
-	<script src="game.js"></script> 
+	<script src="game.js" type="text/javascript"></script> 
 <style>
 	#mainScreen{
 		display: flex;
@@ -14,31 +14,33 @@
 		
 	}
 	#board{
-		margin-top: 50px;
-		width: 480px;
-		height: 480px;
+		width: 420px;
+		height: 420px;
 		border-style : solid;
 		border-width: 2px;
 		display: flex;
 		flex-direction: row;
-		flex-flow: nowrap;
+		flex-wrap: wrap;
+		
 	}
 	.tile{
-		height: 158px;
-		width: 158px;
+		height: 138px;
+		width: 138px;
 		border-style : solid;
 		border-width: 0.1px;
 		cursor: pointer;
+		font-size: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
 	}
 	
 	.button-container{
-		margin-top: 20px;
 		display: flex;
 		flex-direction: row;
-		width: 480px;
+		width: 420px;
 		height: 50px;
-		/* border-width: 1px;
-		border-style: solid; */
 		align-items: center;
 		justify-content: space-around;
 	}
@@ -49,47 +51,64 @@
 	}
 	.prompt{
 		margin-top: 30px;
+		font-size: 24px;
 	}
-
+	.header{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#greetings,#player{
+		font-size: 24px;
+	}
+	.row{
+		display: flex;
+		flex-direction: row;
+	}
 </style>
 </head>
 <body>
 	<div id="mainScreen">
-		<p>
-			Let's play a game 
-		</p>
+		<div class="header">
+			<p id = "greetings">
+				Let's play a game 
+			</p>
+			<p id = "player">
+			</p>
+		</div>
 		<div id = "board">
 			<div class="row">
-				<div id = "tile-1" class = "tile" >
-					
+				<div id = "tile-1" class = "tile" onclick="move('tile-1',[0,0])" >
+					-
 				</div>
-				<div id = "tile-2" class = "tile">
-					
+				<div id = "tile-2" class = "tile" onclick="move('tile-2',[0,1])">
+					-
 				</div>
-				<div id = "tile-3" class = "tile">
-					
-				</div>
-			</div>
-			<div class="row">
-				<div id = "tile-4" class = "tile">
-					
-				</div>
-				<div id = "tile-5" class = "tile">
-					
-				</div>
-				<div id = "tile-6" class = "tile">
-					
+				<div id = "tile-3" class = "tile" onclick="move('tile-3',[0,2])">
+					-
 				</div>
 			</div>
 			<div class="row">
-				<div id = "tile-7"  class = "tile">
-					
+				<div id = "tile-4" class = "tile" onclick="move('tile-4',[1,0])">
+					-
 				</div>
-				<div id = "tile-8" class = "tile">
-					
+				<div id = "tile-5" class = "tile" onclick="move('tile-5',[1,1])">
+					-
 				</div>
-				<div id = "tile-9" class = "tile">
-					
+				<div id = "tile-6" class = "tile" onclick="move('tile-6',[1,2])">
+					-
+				</div>
+			</div>
+			<div class="row">
+				<div id = "tile-7" class = "tile" onclick="move('tile-7',[2,0])">
+					-
+				</div>
+				<div id = "tile-8" class = "tile" onclick="move('tile-8',[2,1])">
+					-
+				</div>
+				<div id = "tile-9" class = "tile" onclick="move('tile-9',[2,2])">
+					-
 				</div>
 			</div>
 		</div>
@@ -100,10 +119,10 @@
 	</div>
 	<div class = "button-container">
 		<div>
-			<button class = "choices">X</button>
+			<button class = "choices" id = "buttonX" onclick="choosePlayer('X')">X</button>
 		</div>
 		<div>
-			<button class = "choices">O</button>
+			<button class = "choices" id = "buttonO"  onclick="choosePlayer('O')">O</button>
 		</div>
 	</div>
 
