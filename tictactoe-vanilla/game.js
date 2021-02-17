@@ -67,6 +67,9 @@ const checkBoard = (boardCopy,symbol) => {
     return false;
 }
 
+// Sample of 2d array deepcopy
+// const array2 = array1.map(elem => elem);
+// const array2 = [...array1];
 
 const maxValue = () => {
 
