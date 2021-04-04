@@ -1,0 +1,38 @@
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#header{
+	margin-top: 50px;
+	font-size: 36px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 800px
+}
+.buttons{
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 800px;
+}
+#html,#css,#javascript{
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	box-shadow: 5px 5px;
+	width: 150px;
+	padding:10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#content{
+
+}
+
+/*2/3  '3llo_' ...  */
