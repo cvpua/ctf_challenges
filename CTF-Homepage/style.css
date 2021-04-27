@@ -1,0 +1,26 @@
+.clues{
+    display : flex;
+    flex-direction: column;
+    width: 70%;
+    font-size: x-large;
+    margin : 0% 0% 0% 3%;
+}
+
+.greetings{
+    font-size: xx-large;
+    margin: 2% 0% 5% 3%;
+}
+
+.flag{
+    display : flex;
+    flex-direction: column;
+    width : 50%;
+    font-size: x-large;
+    margin : 0% 0% 5% 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    margin : 2% 0% 0% 0%;
+}
